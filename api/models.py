@@ -7,6 +7,8 @@ class Book(models.Model):
     description = models.TextField()
     author = models.CharField(max_length=200)
     quantity = models.IntegerField()
+    price = models.FloatField(null=True)
+    trending = models.BooleanField(default=False,null=True)
     stock = (
         ('In Stock','In Stock'),
         ('Out of Stock','Out of Stock')
